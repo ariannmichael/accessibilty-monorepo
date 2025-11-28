@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export const connectMongo = async () => {
-    const mongoUri = process.env.MONGODB_URI as string ?? "mongodb://localhost:27017/accessibility-monorepo";
+    const mongoUri = process.env.MONGO_URI as string ?? "mongodb://localhost:27017/accessibility-analyzer";
 
     try {
         await mongoose.connect(mongoUri);
