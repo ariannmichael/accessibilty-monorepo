@@ -16,7 +16,7 @@ export class AnalyzeController {
                 return res.status(400).json({ error: "Failed to analyze URL" });
             }
 
-            const createdAnalysisResult = await createAnalysisResult(analysisResult);
+            const createdAnalysisResult = await createAnalysisResult(url,analysisResult);
             res.status(200).json(createdAnalysisResult);
         } catch (error) {
             res.status(500).json({ error: "Internal server error" });
